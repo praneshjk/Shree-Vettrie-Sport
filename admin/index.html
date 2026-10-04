@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin – Shree Vettrie Sports Empire</title>
+<link rel="icon" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div id="login" class="login">
+  <form class="login-card" id="loginForm">
+    <img src="assets/logo.png" alt="Shree Vettrie Sports Empire">
+    <h1>Admin Panel</h1>
+    <p>Sign in to manage your store</p>
+    <input class="in" type="email" id="email" placeholder="Admin email" required autocomplete="username">
+    <input class="in" type="password" id="password" placeholder="Password" required autocomplete="current-password">
+    <button class="btn gold" id="loginBtn" type="submit">Sign in</button>
+    <div class="err" id="loginErr"></div>
+  </form>
+</div>
+
+<div id="app" class="app" hidden>
+  <aside class="side" id="side">
+    <div class="side-brand"><img src="assets/logo.png" alt=""><div><b>SHREE VETTRIE</b><small>ADMIN</small></div></div>
+    <nav id="menu">
+      <a href="#dashboard" data-v="dashboard">📊 Dashboard</a>
+      <a href="#orders" data-v="orders">🧾 Orders <span class="pill" id="pillOrders"></span></a>
+      <a href="#products" data-v="products">📦 Products</a>
+      <a href="#categories" data-v="categories">🏷️ Categories</a>
+      <a href="#enquiries" data-v="enquiries">📨 Bulk Enquiries <span class="pill" id="pillEnq"></span></a>
+      <a href="#settings" data-v="settings">⚙️ Store Settings</a>
+    </nav>
+    <div class="side-foot"><a id="storeLink" href="../shop/index.html" target="_blank">🌐 View live store ↗</a><button id="logout">Sign out</button></div>
+  </aside>
+  <div class="main">
+    <header class="top"><button class="burger" id="burger">☰</button><h2 id="title">Dashboard</h2><span class="who" id="who"></span></header>
+    <div class="content" id="content"></div>
+  </div>
+</div>
+<div class="modal-bg" id="modalBg"><div class="modal" id="modal"></div></div>
+<div class="toasts" id="toasts"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
